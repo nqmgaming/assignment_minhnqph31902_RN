@@ -23,8 +23,21 @@
         "backgroundColor": "#ffffff"
       }
     },
+    "scheme": "asmcoffe",
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/font/Poppins-Regular.ttf",
+            "./assets/font/Poppins-Bold.ttf"
+          ]
+        }
+      ],
+      "expo-router"
+    ]
   }
 }

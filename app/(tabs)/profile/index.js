@@ -4,7 +4,13 @@ import React from 'react'
 const index = () => {
     return (
         <View>
-            <Text>index</Text>
+            <Text>profile</Text>
+
+            {/* Profile */}
+            <View>
+                <Text>Profile</Text>
+
+            </View>
         </View>
     )
 }

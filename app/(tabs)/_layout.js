@@ -1,54 +1,85 @@
 import { Tabs } from "expo-router";
-import { colors } from "../../src/constants/colors";
-import { Entypo } from '@expo/vector-icons';
+import { FontAwesome } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { StatusBar } from "expo-status-bar";
 
-export default function Layout({ }) {
+export default function Layout() {
     return (
-        <Tabs>
-            <Tabs.Screen name="Home" component={'Home'} options={{
-                tabBarLabel: "Home",
-                tabBarLabelStyle: { color: colors.title },
-                headerShown: false,
-                tabBarIcon: ({ focused }) =>
-                    focused ? (
-                        <Entypo name="home" size={24} color="black" />
-                    ) : (
-                        <Entypo name="home" size={24} color="black" />
-                    )
-            }} />
-            <Tabs.Screen name="" component={'Cart'} options={{
-                tabBarLabel: "Cart",
-                tabBarLabelStyle: { color: colors.title },
-                headerShown: false,
-                tabBarIcon: ({ focused }) =>
-                    focused ? (
-                        <Entypo name="cart" size={24} color="black" />
-                    ) : (
-                        <Entypo name="cart" size={24} color="black" />
-                    )
-            }} />
-            <Tabs.Screen name="Favorite" component={Home} options={{
-                tabBarLabel: "Favorite",
-                tabBarLabelStyle: { color: colors.title },
-                headerShown: false,
-                tabBarIcon: ({ focused }) =>
-                    focused ? (
-                        <Entypo name="favorite" size={24} color="black" />
-                    ) : (
-                        <Entypo name="favorite" size={24} color="black" />
-                    )
-            }} />
-            <Tabs.Screen name="Profile" component={Home} options={{
-                tabBarLabel: "Profile",
-                tabBarLabelStyle: { color: colors.title },
-                headerShown: false,
-                tabBarIcon: ({ focused }) =>
-                    focused ? (
-                        <Entypo name="person" size={24} color="black" />
-                    ) : (
-                        <Entypo name="person" size={24} color="black" />
-                    )
-            }} />
+        <Tabs
+            screenOptions={{
+                tabBarShowLabel: true,
+                tabBarStyle: {
+                    backgroundColor: "#fff",
+                    elevation: 0,
+                    height: 60,
+                    paddingBottom: 5,
+                    marginHorizontal: 10,
+                    borderRadius: 25,
+                    position: "absolute",
+                    bottom: 10,
+                    left: 10,
+                    right: 10,
+                },
+                tabBarActiveTintColor: "purple",
+                tabBarHideOnKeyboard: true,
+            }}
+        >
+            <Tabs.Screen
+                name="home"
+                options={{
+                    tabBarLabel: "Home",
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) =>
+                        focused ? (
+                            <Feather name="home" size={24} color="purple" />
+                        ) : (
+                            <Feather name="home" size={24} color="black" />
+                        ),
+                }}
+            />
+            <Tabs.Screen
+                name="cart"
+                options={{
+                    tabBarLabel: "Cart",
+                    tabBarBadge: 3,
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) =>
+                        focused ? (
+                            <Feather name="shopping-cart" size={24} color="purple" />
+                        ) : (
+                            <Feather name="shopping-cart" size={24} color="black" />
+                        ),
+                }}
+            />
+            <Tabs.Screen
+                name="favorite"
+                options={{
+                    tabBarLabel: "Favorite",
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) =>
+                        focused ? (
+                            <MaterialIcons name="favorite-border" size={24} color="purple" />
+                        ) : (
+                            <MaterialIcons name="favorite-border" size={24} color="black" />
+                        ),
+                }}
+            />
+            <Tabs.Screen
+                name="profile"
+                options={{
+                    tabBarLabel: "Profile",
+                    headerShown: false,
+                    tabBarIcon: ({ focused }) =>
+                        focused ? (
+                            <Ionicons name="person-outline" size={24} color="purple" />
+                        ) : (
+                            <Ionicons name="person-outline" size={24} color="black" />
+                        ),
+                }}
+            />
         </Tabs>
-    )
+    );
 }

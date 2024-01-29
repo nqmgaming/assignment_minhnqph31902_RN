@@ -207,3 +207,77 @@ export const cartItems = [
         qty: 1,
     },
 ]
+
+// Favorite items temp include: id, name, image, price, countInStock 10 items
+export const favoriteItems = [
+    {
+        _id: '1',
+        name: 'Nike Slim Shirt',
+        image: '../images/p1.png',
+        price: 120,
+        countInStock: 10,
+    },
+    {
+        _id: '2',
+        name: 'Adidas Fit Shirt',
+        image: 'p2.png',
+        price: 100,
+        countInStock: 20,
+    },
+    {
+        _id: '3',
+        name: 'Lacoste Free Shirt',
+        image: 'p3.png',
+        price: 220,
+        countInStock: 0,
+    },
+    {
+        _id: '4',
+        name: 'Nike Slim Pant',
+        image: 'p4.png',
+        price: 78,
+        countInStock: 15,
+    },
+    {
+        _id: '5',
+        name: 'Puma Slim Pant',
+        image: 'p5.png',
+        price: 65,
+        countInStock: 5,
+    },
+    {
+        _id: '6',
+        name: 'Adidas Fit Pant',
+        image: 'p6.png',
+        price: 139,
+        countInStock: 12,
+    },
+    {
+        _id: '7',
+        name: 'Nike Slim Shirt',
+        image: 'p7.png',
+        price: 120,
+        countInStock: 10,
+    },
+    {
+        _id: '8',
+        name: 'Adidas Fit Shirt',
+        image: 'p8.png',
+        price: 100,
+        countInStock: 20,
+    },
+    {
+        _id: '9',
+        name: 'Lacoste Free Shirt',
+        image: 'p9.png',
+        price: 220,
+        countInStock: 0,
+    },
+    {
+        _id: '10',
+        name: 'Nike Slim Pant',
+        image: 'p10.png',
+        price: 78,
+        countInStock: 15,
+    },
+]
